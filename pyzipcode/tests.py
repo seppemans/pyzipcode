@@ -16,12 +16,12 @@ class TestSequenceFunctions(unittest.TestCase):
         
     def test_correct_longitude_value(self):
         zip = self.db[54115]
-        self.assertTrue(zip.latitude > 44.42041 and zip.latitude < 44.42043)
-    
+        self.assertTrue(zip.latitude > 44.42 and zip.latitude < 44.44)
+
     def test_correct_latitude_value(self):
         zip = self.db[54115]
-        self.assertTrue(zip.longitude > -88.07897 and zip.longitude < -88.07895)
-        
+        self.assertTrue(zip.longitude > -88.09 and zip.longitude < -88.07)
+
     def test_correct_timezone(self):
         zip = self.db[54115]
         self.assertEquals(zip.timezone, -6)
