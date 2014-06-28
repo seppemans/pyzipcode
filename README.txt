@@ -1,8 +1,8 @@
 Introduction
 ============
 
-This package will allow you to get zip code information. The data used in this 
-package is retrieved from http://pablotron.org/files/zipcodes-csv-10-Aug-2004.zip
+This package will allow you to get zip code information. The data used in this
+package is retrieved from http://download.geonames.org/export/zip/
 
 pyzipcode uses a local sqlite database to run. You can replace it with your own
 other storage mechanism with a little effort.
@@ -24,18 +24,18 @@ Here is some basic usage..
 	44.42042
 	>>> zipcode.timezone
 	-6
-	
-	
+
+
 Search zip codes...
 
 	>>> from pyzipcode import ZipCodeDatabase
 	>>> zcdb = ZipCodeDatabase()
 	>>> len(zcdb.find_zip(city="Oshkosh"))
 	7
-	
+
 
 Get a list of zipcodes around a radius of a zipcode
-	
+
 	>>> from pyzipcode import ZipCodeDatabase
 	>>> zcdb = ZipCodeDatabase()
 	>>> [z.zip for z in zcdb.get_zipcodes_around_radius('54901', 10)]
